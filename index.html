@@ -12,49 +12,39 @@
 </head>
 <body>
   <header class="app-header">
-    <div>
+    <button id="backButton" class="icon-button back-button" type="button" aria-label="Voltar" hidden>←</button>
+    <div class="header-copy">
       <span class="eyebrow">TRAUB TNL12/7 · TX8i</span>
-      <h1>TNL12 Assistente</h1>
-      <p>Consulta rápida para preparação, programação e diagnóstico.</p>
+      <h1 id="pageTitle">TNL12 Assistente</h1>
+      <p id="pageSubtitle">Central técnica para preparação, programação e diagnóstico.</p>
     </div>
     <span id="connectionStatus" class="status-pill" aria-live="polite">Online</span>
   </header>
 
-  <main>
-    <section class="hero-card">
-      <label class="search-label" for="searchInput">Buscar código ou função</label>
-      <div class="search-box">
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search" inputmode="search" autocomplete="off" placeholder="Ex.: M403, contrafuso, refrigeração…">
-        <button id="clearSearch" type="button" aria-label="Limpar busca">×</button>
-      </div>
-      <div id="categoryFilters" class="chips" aria-label="Filtrar por categoria"></div>
-    </section>
+  <main id="app" tabindex="-1"></main>
 
-    <section class="section-heading">
-      <div>
-        <span class="eyebrow">Biblioteca técnica</span>
-        <h2>Funções M</h2>
-      </div>
-      <strong id="resultCount" class="result-count">0 códigos</strong>
-    </section>
-
-    <section id="codeList" class="code-list" aria-live="polite"></section>
-
-    <section id="emptyState" class="empty-state" hidden>
-      <strong>Nenhum código encontrado</strong>
-      <p>Tente buscar pelo número, sistema ou descrição da função.</p>
-    </section>
-
-    <aside class="safety-note">
-      <strong>Uso técnico responsável</strong>
-      <p>Confirme a função na documentação da máquina e valide o estado dos subsistemas antes de executar qualquer comando.</p>
-    </aside>
-  </main>
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <button type="button" data-route="home" aria-label="Início">
+      <span class="nav-icon">⌂</span>
+      <span>Início</span>
+    </button>
+    <button type="button" data-route="m" aria-label="Funções M">
+      <span class="nav-icon">M</span>
+      <span>Funções M</span>
+    </button>
+    <button type="button" data-route="g" aria-label="Funções G">
+      <span class="nav-icon">G</span>
+      <span>Funções G</span>
+    </button>
+    <button type="button" data-route="setup" aria-label="Setup">
+      <span class="nav-icon">✓</span>
+      <span>Setup</span>
+    </button>
+  </nav>
 
   <footer>
-    <span>Base inicial: Manual TRAUB 143 419 · 09/2006</span>
-    <span>V0.1</span>
+    <span>Manual TRAUB 143 419 · 09/2006</span>
+    <span>V0.2</span>
   </footer>
 
   <script src="app.js" defer></script>
