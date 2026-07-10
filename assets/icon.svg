@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">TNL12 Assistente</title>
+  <desc id="desc">Ícone técnico vermelho e preto com as letras TNL12.</desc>
+  <rect width="512" height="512" rx="112" fill="#0b0f14"/>
+  <path d="M90 146h332v220H90z" fill="#151c25" stroke="#e83b3b" stroke-width="18"/>
+  <path d="M118 184h276M118 328h276" stroke="#394556" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="151" cy="256" r="38" fill="#e83b3b"/>
+  <circle cx="361" cy="256" r="38" fill="#e83b3b"/>
+  <path d="M189 256h134" stroke="#f4f7fb" stroke-width="18" stroke-linecap="round"/>
+  <text x="256" y="454" fill="#f4f7fb" font-size="66" font-family="Arial, Helvetica, sans-serif" font-weight="800" text-anchor="middle">TNL12</text>
+</svg>
