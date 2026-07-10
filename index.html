@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0f14">
+  <meta name="description" content="Assistente técnico para preparadores CNC da TRAUB TNL12/7 com comando TX8i.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>TNL12 Assistente</title>
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="eyebrow">TRAUB TNL12/7 · TX8i</span>
+      <h1>TNL12 Assistente</h1>
+      <p>Consulta rápida para preparação, programação e diagnóstico.</p>
+    </div>
+    <span id="connectionStatus" class="status-pill" aria-live="polite">Online</span>
+  </header>
+
+  <main>
+    <section class="hero-card">
+      <label class="search-label" for="searchInput">Buscar código ou função</label>
+      <div class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" inputmode="search" autocomplete="off" placeholder="Ex.: M403, contrafuso, refrigeração…">
+        <button id="clearSearch" type="button" aria-label="Limpar busca">×</button>
+      </div>
+      <div id="categoryFilters" class="chips" aria-label="Filtrar por categoria"></div>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <span class="eyebrow">Biblioteca técnica</span>
+        <h2>Funções M</h2>
+      </div>
+      <strong id="resultCount" class="result-count">0 códigos</strong>
+    </section>
+
+    <section id="codeList" class="code-list" aria-live="polite"></section>
+
+    <section id="emptyState" class="empty-state" hidden>
+      <strong>Nenhum código encontrado</strong>
+      <p>Tente buscar pelo número, sistema ou descrição da função.</p>
+    </section>
+
+    <aside class="safety-note">
+      <strong>Uso técnico responsável</strong>
+      <p>Confirme a função na documentação da máquina e valide o estado dos subsistemas antes de executar qualquer comando.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Base inicial: Manual TRAUB 143 419 · 09/2006</span>
+    <span>V0.1</span>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
