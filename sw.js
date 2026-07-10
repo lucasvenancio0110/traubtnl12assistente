@@ -1,11 +1,12 @@
-const CACHE_NAME = "tnl12-assistente-v0.2.1";
+const CACHE_NAME = "tnl12-assistente-v0.3.0";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./styles.css?v=0.2.1",
-  "./app.js?v=0.2.1",
-  "./manifest.webmanifest?v=0.2.1",
-  "./assets/icon.svg?v=0.2.1"
+  "./styles.css?v=0.3.0",
+  "./app.js?v=0.3.0",
+  "./compact-ui.js?v=0.3.0",
+  "./manifest.webmanifest?v=0.3.0",
+  "./assets/icon.svg?v=0.3.0"
 ];
 
 self.addEventListener("install", (event) => {
