@@ -1,4 +1,4 @@
-const CACHE_NAME = "tnl12-assistente-v0.1";
+const CACHE_NAME = "tnl12-assistente-v0.2";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -28,14 +28,12 @@ self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) return cachedResponse;
-
-      return fetch(event.request).then((networkResponse) => {
+    fetch(event.request)
+      .then((networkResponse) => {
         const copy = networkResponse.clone();
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
         return networkResponse;
-      }).catch(() => caches.match("./index.html"));
-    })
+      })
+      .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
   );
 });
