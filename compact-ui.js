@@ -26,7 +26,6 @@
   `;
   document.body.appendChild(overlay);
 
-  const sheet = overlay.querySelector(".detail-sheet");
   const codeElement = overlay.querySelector("#sheetCode");
   const titleElement = overlay.querySelector("#sheetTitle");
   const metaElement = overlay.querySelector("#sheetMeta");
@@ -110,8 +109,6 @@
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay) closeSheet();
   });
-
-  sheet.addEventListener("click", (event) => event.stopPropagation());
 
   copyButton.addEventListener("click", async () => {
     if (!currentCode) return;
