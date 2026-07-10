@@ -1,0 +1,20 @@
+{
+  "name": "TNL12 Assistente",
+  "short_name": "TNL12",
+  "description": "Assistente técnico para preparadores CNC da TRAUB TNL12/7 com comando TX8i.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080b10",
+  "theme_color": "#0b0f14",
+  "lang": "pt-BR",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
